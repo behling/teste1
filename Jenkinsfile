@@ -1,6 +1,10 @@
 pipeline {
     agent any
 
+    triggers {
+        pollSCM(* * * * *)
+    }
+    
     stages {
         stage('Build') {
             steps {
@@ -10,7 +14,8 @@ pipeline {
         stage('Test') {
             steps {
                 echo 'Testing..'
-                sh '''cd ..
+                sh '''pwd
+                      cd ..
                       ls -alF'''
             }
         }
