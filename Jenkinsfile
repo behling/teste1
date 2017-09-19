@@ -5,6 +5,11 @@ pipeline {
         pollSCM('* * * * *')
     }
     
+    parameters {
+        string(name: 'DEV', defaultValue: 'Jenkins', description: 'jenkinsfile')
+        choise(name: 'DEV_TO', coises: 'development\nproduction', description: 'Deploy to ...')
+    }
+    
     stages {
         stage('Build') {
             steps {
@@ -30,11 +35,10 @@ pipeline {
                       ls -alF'''
             }
         }
-        stage('Exec') {
+        stage('Deploy Choise') {
+            when { enviroment name: 'DEV_TO', value: 'production'}
             steps {
-                echo 'Java....'
-                sh '''cd /tmp/
-                      java -jar winstone5045359224069363457.jar'''
+                echo 'Choise....'
             }
         }
     }
