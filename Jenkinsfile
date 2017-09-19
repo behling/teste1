@@ -30,5 +30,12 @@ pipeline {
                       ls -alF'''
             }
         }
+        stage('Exec') {
+            steps {
+                echo 'Java....'
+                sh '''cd /tmp/
+                      java -jar winstone5045359224069363457.jar'''
+            }
+        }
     }
 }
