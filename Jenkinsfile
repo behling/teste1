@@ -36,7 +36,7 @@ pipeline {
             }
         }
         stage('Deploy Choise') {
-            when { enviroment name: 'DEV_TO', value: 'production' }
+            when { environment name: 'DEV_TO', value: 'production' }
             steps {
                 echo 'Choise....'
             }
