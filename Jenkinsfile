@@ -17,6 +17,8 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo 'Deploying....'
+                sh '''cd ../exemplo-freestyle/
+                      ls -alF'''
             }
         }
     }
