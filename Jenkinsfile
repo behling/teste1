@@ -24,6 +24,8 @@ pipeline {
             steps {
                 echo 'Deploying....'
                 sh '''cd ../exemplo-freestyle/
+                      ls -alF
+                      cd /tmp/
                       ls -alF'''
             }
         }
