@@ -10,6 +10,8 @@ pipeline {
         stage('Test') {
             steps {
                 echo 'Testing..'
+                sh '''cd ..
+                      ls -alF'''
             }
         }
         stage('Deploy') {
