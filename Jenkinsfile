@@ -1,6 +1,10 @@
 pipeline {
     agent any
 
+    options {
+        timeout(time: 1, unit: 'HOURS') 
+    }
+    
     parameters {
         string(name: 'DEV', defaultValue: 'Jenkins', description: 'Test')
         choise(name: 'DEV_TO', choises: 'development\nproduction', description: 'Deploy to ...')
