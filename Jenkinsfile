@@ -15,7 +15,7 @@ pipeline {
             steps {
                 echo 'Testing..'
                 sh '''pwd
-                      cd ..
+                      cd ../../
                       ls -alF'''
             }
         }
