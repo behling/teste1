@@ -7,7 +7,7 @@ pipeline {
     
     parameters {
         string(name: 'DEV', defaultValue: 'Jenkins', description: 'jenkinsfile')
-        choise(name: 'DEV_TO', coises: 'development\nproduction', description: 'Deploy to ...')
+        choise(name: 'DEV_TO', choises: 'development\nproduction', description: 'Deploy to ...')
     }
     
     stages {
@@ -36,7 +36,7 @@ pipeline {
             }
         }
         stage('Deploy Choise') {
-            when { enviroment name: 'DEV_TO', value: 'production'}
+            when { enviroment name: 'DEV_TO', value: 'production' }
             steps {
                 echo 'Choise....'
             }
