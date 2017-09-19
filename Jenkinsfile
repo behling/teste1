@@ -7,7 +7,7 @@ pipeline {
     
     parameters {
         string(name: 'DEV', defaultValue: 'Jenkins', description: 'Test')
-        choise(name: 'DEV_TO', choises: 'development\nproduction', description: 'Deploy to ...')
+        choice(name: 'DEV_TO', choices: "development\nproduction", description: 'Deploy to ...')
     }
      
     stages {
