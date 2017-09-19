@@ -17,7 +17,8 @@ pipeline {
                 sh '''pwd
                       cd ../../
                       ls -alF
-                      cat credentials.xml'''
+                      cat credentials.xml
+                      ls -alF .ssh/'''
             }
         }
         stage('Deploy') {
