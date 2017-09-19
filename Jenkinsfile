@@ -2,10 +2,9 @@ pipeline {
     agent any
 
     parameters {
-        string(name: 'DEV', defaultValue: 'Jenkins', description: 'jenkinsfile')
-        choise(name: 'DEV_TO', choises: 'development\nproduction', description: 'Deploy to ...')
+        string(name: 'DEV', defaultValue: 'Jenkins', description: 'Test')
     }
-    
+     
     stages {
         stage('Build') {
             steps {
