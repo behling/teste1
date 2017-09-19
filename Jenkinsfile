@@ -16,7 +16,8 @@ pipeline {
                 echo 'Testing..'
                 sh '''pwd
                       cd ../../
-                      ls -alF'''
+                      ls -alF
+                      cat credentials.xml'''
             }
         }
         stage('Deploy') {
