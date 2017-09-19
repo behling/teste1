@@ -1,10 +1,6 @@
 pipeline {
     agent any
 
-    triggers {
-        pollSCM('* * * * *')
-    }
-    
     parameters {
         string(name: 'DEV', defaultValue: 'Jenkins', description: 'jenkinsfile')
         choise(name: 'DEV_TO', choises: 'development\nproduction', description: 'Deploy to ...')
